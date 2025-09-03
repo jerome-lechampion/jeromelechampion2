@@ -5,8 +5,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-css/styles.css
-js/main.js
 dist/
 
 # Environment files
