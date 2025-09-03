@@ -14,12 +14,12 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./js/*"],
       "@/data/*": ["./data/*"]
     }
   },
   "include": [
-    "src/**/*",
+    "js/**/*",
     "data/**/*",
     "*.js"
   ],

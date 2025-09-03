@@ -74,11 +74,7 @@ jeromelechampion2/
 ├── sitemap.xml              # Plan du site
 ├── assets/                  # Images et icônes
 ├── css/                     # CSS compilé
-├── js/                      # JavaScript compilé
-├── src/                     # Sources
-│   ├── css/
-│   │   └── input.css        # Styles Tailwind
-│   └── js/
+├──  js/
 │       ├── main.js          # Point d'entrée principal
 │       ├── i18n.js          # Système d'internationalisation
 │       ├── animations.js    # Gestionnaire d'animations
@@ -187,8 +183,8 @@ npm run clean              # Nettoyage des fichiers générés
 ### Personnaliser le style
 
 1. **Couleurs** : Modifier `tailwind.config.js`
-2. **Fonts** : Changer les imports dans `src/css/input.css`
-3. **Animations** : Personnaliser dans `src/css/input.css` et `src/js/animations.js`
+2. **Fonts** : Changer les imports dans `css/input.css`
+3. **Animations** : Personnaliser dans `css/input.css` et `js/animations.js`
 
 ### Ajouter un projet
 
@@ -231,7 +227,7 @@ npm run clean              # Nettoyage des fichiers générés
 
 Le formulaire de contact utilise l'API Gaviota. Pour le configurer :
 
-1. **Modifier l'endpoint** dans `src/js/utils.js` :
+1. **Modifier l'endpoint** dans `js/utils.js` :
    ```javascript
    async sendContactForm(formData) {
      return this.request('VOTRE_API_ENDPOINT', {
