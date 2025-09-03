@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jérôme Le Champion - Lead Développeur Full-Stack spécialisé dans React, Node.js et les intégrations SI. Disponible pour missions freelance.">
+    <meta name="keywords" content="développeur full-stack, React, Node.js, freelance, Paris, JavaScript, TypeScript">
+    <meta name="author" content="Jérôme Le Champion">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jérôme Le Champion - Lead Développeur Full-Stack">
+    <meta property="og:description" content="Je conçois et scale des plateformes web & mobiles. De l'architecture à la livraison, je transforme des besoins complexes en produits fiables.">
+    <meta property="og:image" content="https://jeromelechampion.dev/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://jeromelechampion.dev">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jérôme Le Champion - Lead Développeur Full-Stack">
+    <meta name="twitter:description" content="Je conçois et scale des plateformes web & mobiles. Disponible pour missions freelance.">
+    <meta name="twitter:image" content="https://jeromelechampion.dev/assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Theme color -->
+    <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)">
+    
+    <title>Jérôme Le Champion - Lead Développeur Full-Stack</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased" data-page="home">
+    <!-- Skip to main content -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-lg z-50">
+        Aller au contenu principal
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 dark-transition">
+        <div class="container-max mx-auto container-padding">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="/" class="text-xl font-bold text-gradient hover:scale-105 transition-transform duration-200" aria-label="Accueil - Jérôme Le Champion">
+                    JLC
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active" data-i18n="nav.home">Accueil</a>
+                    <a href="projets.html" class="nav-link" data-i18n="nav.projects">Projets</a>
+                    <a href="experience.html" class="nav-link" data-i18n="nav.experience">Expérience</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+                </div>
+
+                <!-- Utility buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Language switcher -->
+                    <div class="relative">
+                        <button type="button" class="flex items-center space-x-1 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" data-lang-menu-toggle aria-label="Choisir la langue">
+                            <span id="current-lang" class="text-sm font-medium">FR</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hidden" data-lang-menu>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200" data-lang="fr">🇫🇷 Français</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200" data-lang="en">🇬🇧 English</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200" data-lang="es">🇪🇸 Español</a>
+                        </div>
+                    </div>
+
+                    <!-- Theme toggle -->
+                    <button type="button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200" data-theme-toggle aria-label="Basculer le mode sombre">
+                        <svg class="w-5 h-5 icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 icon-moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200" data-mobile-menu-toggle aria-label="Ouvrir le menu">
+                    <span class="sr-only">Ouvrir le menu</span>
+                    <div class="w-6 h-6 relative">
+                        <span class="absolute left-0 top-1 w-6 h-0.5 bg-current transition-all duration-300 ease-out"></span>
+                        <span class="absolute left-0 top-3 w-6 h-0.5 bg-current transition-all duration-300 ease-out"></span>
+                        <span class="absolute left-0 top-5 w-6 h-0.5 bg-current transition-all duration-300 ease-out"></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" data-mobile-menu>
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+                    <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-i18n="nav.home">Accueil</a>
+                    <a href="projets.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-i18n="nav.projects">Projets</a>
+                    <a href="experience.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-i18n="nav.experience">Expérience</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-i18n="nav.contact">Contact</a>
+                    
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-3 mt-3">
+                        <div class="flex items-center justify-between px-3 py-2">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">Langue</span>
+                            <div class="flex space-x-2">
+                                <button type="button" class="text-xs px-2 py-1 rounded border" data-lang="fr">FR</button>
+                                <button type="button" class="text-xs px-2 py-1 rounded border" data-lang="en">EN</button>
+                                <button type="button" class="text-xs px-2 py-1 rounded border" data-lang="es">ES</button>
+                            </div>
+                        </div>
+                        <button type="button" class="flex items-center w-full px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-theme-toggle>
+                            <span class="theme-text">Mode sombre</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="pt-16 section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen flex items-center">
+            <div class="container-max mx-auto container-padding">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-on-scroll" data-animation="slide-right">
+                        <h1 class="hero-title mb-6">
+                            <span class="block text-gray-900 dark:text-white" data-i18n="home.title">Lead Développeur Full-Stack</span>
+                            <span class="block text-gradient mt-2" data-i18n="home.subtitle">Je conçois et scale des plateformes web & mobiles</span>
+                        </h1>
+                        
+                        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed" data-i18n="home.description">
+                            De l'architecture à la livraison, je transforme des besoins complexes en produits fiables et performants.
+                        </p>
+
+                        <!-- Key expertise -->
+                        <div class="mb-8 space-y-3">
+                            <div class="flex items-center text-gray-700 dark:text-gray-300">
+                                <svg class="w-5 h-5 text-accent-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Intégrations SI (SAP/ERP/CRM), e-commerce B2B, IoT temps réel</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 dark:text-gray-300">
+                                <svg class="w-5 h-5 text-accent-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Code maintenable (tests, CI/CD, qualité industrielle)</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 dark:text-gray-300">
+                                <svg class="w-5 h-5 text-accent-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Performance, sécurité, accessibilité by default</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact.html" class="btn btn-primary text-center" data-i18n="home.cta.contact">
+                                Discutons de votre projet
+                            </a>
+                            <a href="projets.html" class="btn btn-outline text-center" data-i18n="home.cta.projects">
+                                Voir mes réalisations
+                            </a>
+                        </div>
+
+                        <!-- Availability indicator -->
+                        <div class="mt-6 flex items-center text-sm text-green-600 dark:text-green-400">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
+                            <span>Disponible pour missions freelance</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image / Stats -->
+                    <div class="lg:pl-12 animate-on-scroll" data-animation="slide-left" data-delay="200">
+                        <div class="relative">
+                            <!-- Profile image placeholder -->
+                            <div class="w-80 h-80 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl shadow-2xl flex items-center justify-center text-white text-6xl font-bold mb-8">
+                                JLC
+                            </div>
+
+                            <!-- Floating stats cards -->
+                            <div class="absolute -top-4 -left-4 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 animate-bounce-gentle">
+                                <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">6+</div>
+                                <div class="text-xs text-gray-600 dark:text-gray-400" data-i18n="home.stats.experience">ans d'expérience</div>
+                            </div>
+
+                            <div class="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 animate-bounce-gentle" style="animation-delay: 0.5s">
+                                <div class="text-2xl font-bold text-accent-600 dark:text-accent-400">50+</div>
+                                <div class="text-xs text-gray-600 dark:text-gray-400" data-i18n="home.stats.countries">pays couverts</div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 animate-bounce-gentle" style="animation-delay: 1s">
+                                <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">10+</div>
+                                <div class="text-xs text-gray-600 dark:text-gray-400" data-i18n="home.stats.integrations">intégrations API</div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 animate-bounce-gentle" style="animation-delay: 1.5s">
+                                <div class="text-2xl font-bold text-accent-600 dark:text-accent-400">M€</div>
+                                <div class="text-xs text-gray-600 dark:text-gray-400" data-i18n="home.stats.revenue">de CA géré</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="section-padding bg-white dark:bg-gray-900">
+            <div class="container-max mx-auto container-padding">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h2 class="section-title text-gray-900 dark:text-white mb-4">Stack Technique</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300">Technologies que je maîtrise pour vos projets</p>
+                </div>
+
+                <!-- Tech grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 stagger-children" data-stagger-delay="100">
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold text-sm">React</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">React</p>
+                    </div>
+                    
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-900 dark:text-white font-bold text-xs">Next.js</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">Next.js</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold text-xs">TS</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">TypeScript</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
+                            <span class="text-green-600 dark:text-green-400 font-bold text-xs">Node</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">Node.js</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 bg-pink-100 dark:bg-pink-900 rounded-lg flex items-center justify-center">
+                            <span class="text-pink-600 dark:text-pink-400 font-bold text-xs">GQL</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">GraphQL</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center">
+                            <span class="text-indigo-600 dark:text-indigo-400 font-bold text-xs">SQL</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section-padding bg-gray-50 dark:bg-gray-800">
+            <div class="container-max mx-auto container-padding">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h2 class="section-title text-gray-900 dark:text-white mb-4" data-i18n="home.projects.title">Projets en vedette</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300" data-i18n="home.projects.subtitle">Quelques réalisations marquantes</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Project 1 -->
+                    <div class="card overflow-hidden group animate-on-scroll" data-delay="100">
+                        <div class="aspect-video bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white text-lg font-semibold">
+                            E-commerce B2B
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                                Portail Distributeur Multi-Pays
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                Plateforme e-commerce B2B déployée dans 50+ pays avec intégration SAP et RBAC avancé.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">Next.js</span>
+                                <span class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">Node.js</span>
+                                <span class="px-2 py-1 text-xs bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded">GraphQL</span>
+                            </div>
+                            <a href="projets.html#distributor-portal" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm transition-colors duration-200">
+                                Voir le projet →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="card overflow-hidden group animate-on-scroll" data-delay="200">
+                        <div class="aspect-video bg-gradient-to-br from-accent-500 to-accent-700 flex items-center justify-center text-white text-lg font-semibold">
+                            IoT Monitoring
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                                Monitoring IoT Grande Échelle
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                Supervision temps réel de milliers d'objets connectés avec dashboards et alerting intelligent.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">React</span>
+                                <span class="px-2 py-1 text-xs bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded">InfluxDB</span>
+                                <span class="px-2 py-1 text-xs bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded">Redis</span>
+                            </div>
+                            <a href="projets.html#iot-monitoring" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm transition-colors duration-200">
+                                Voir le projet →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="card overflow-hidden group animate-on-scroll md:col-span-2 lg:col-span-1" data-delay="300">
+                        <div class="aspect-video bg-gradient-to-br from-indigo-500 to-purple-700 flex items-center justify-center text-white text-lg font-semibold">
+                            Mobile App
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                                Écosystème SWAP
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                Plateforme complète GPS + apps mobiles avec ML pour analyse de trajectoires.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">React Native</span>
+                                <span class="px-2 py-1 text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded">ML</span>
+                                <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded">MongoDB</span>
+                            </div>
+                            <a href="projets.html#swap-ecosystem" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm transition-colors duration-200">
+                                Voir le projet →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center animate-on-scroll">
+                    <a href="projets.html" class="btn btn-outline" data-i18n="home.projects.viewAll">
+                        Voir tous les projets
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-padding bg-white dark:bg-gray-900">
+            <div class="container-max mx-auto container-padding">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <h2 class="section-title text-gray-900 dark:text-white mb-4" data-i18n="home.testimonials.title">Témoignages clients</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300" data-i18n="home.testimonials.subtitle">Ce que disent mes partenaires</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="card p-6 animate-on-scroll" data-delay="100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                            "Jérôme a transformé notre vision produit en une plateforme robuste et scalable. Son expertise technique et sa capacité à traduire les besoins métier ont été déterminantes."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full mr-3"></div>
+                            <div>
+                                <div class="font-semibold text-gray-900 dark:text-white">Marie Dupont</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Product Manager, TechCorp</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="card p-6 animate-on-scroll" data-delay="200">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                            "Collaboration exceptionnelle sur notre projet IoT. Jérôme maîtrise parfaitement les enjeux de scalabilité et a mis en place une architecture qui gère sans broncher des milliers de devices."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full mr-3"></div>
+                            <div>
+                                <div class="font-semibold text-gray-900 dark:text-white">Thomas Bernard</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Directeur Technique, InnovateLab</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="card p-6 animate-on-scroll md:col-span-2 lg:col-span-1" data-delay="300">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                            "Un véritable partenaire technique. Au-delà de ses compétences de développement, Jérôme apporte une vision stratégique et accompagne l'équipe dans la montée en compétences."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full mr-3"></div>
+                            <div>
+                                <div class="font-semibold text-gray-900 dark:text-white">Sophie Leroy</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">CEO, StartupXYZ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding bg-primary-600 dark:bg-primary-700 text-white">
+            <div class="container-max mx-auto container-padding text-center">
+                <div class="animate-on-scroll">
+                    <h2 class="section-title mb-4">Prêt à lancer votre projet ?</h2>
+                    <p class="text-xl mb-8 text-primary-100 max-w-3xl mx-auto">
+                        Discutons de votre vision et transformons-la en réalité. Architecture, développement, déploiement - je vous accompagne de bout en bout.
+                    </p>
+                    <a href="contact.html" class="btn bg-white text-primary-600 hover:bg-gray-100 focus:ring-white">
+                        Démarrons la conversation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white">
+        <div class="container-max mx-auto container-padding py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold text-gradient mb-4">Jérôme Le Champion</div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Lead Développeur Full-Stack spécialisé dans les architectures scalables et les intégrations complexes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/jerome-le-champion" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/jerome-le-champion" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="GitHub">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h3 class="font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors duration-200">Accueil</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-white transition-colors duration-200">Projets</a></li>
+                        <li><a href="experience.html" class="text-gray-400 hover:text-white transition-colors duration-200">Expérience</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Boulogne-Billancourt</li>
+                        <li>Paris, France</li>
+                        <li>jerome.le.champion@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-400 text-sm" data-i18n="footer.copyright">
+                    © 2024 Jérôme Le Champion. Tous droits réservés.
+                </p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+                    <span data-i18n="footer.madeWith">Conçu avec</span> ❤️ <span class="text-primary-400">Next.js & Tailwind</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-30" aria-label="Retour en haut">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

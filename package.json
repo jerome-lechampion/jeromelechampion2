@@ -1,0 +1,53 @@
+{
+  "name": "jerome-lechampion-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio professionnel de Jérôme Le Champion - Lead Développeur Full-Stack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run css:watch\" \"live-server --port=3000 --host=localhost --open=/\"",
+    "build": "npm run css:build && npm run js:build",
+    "css:build": "tailwindcss -i ./src/css/input.css -o ./css/styles.css --minify",
+    "css:watch": "tailwindcss -i ./src/css/input.css -o ./css/styles.css --watch",
+    "js:build": "esbuild src/js/main.js --bundle --outfile=js/main.js --format=iife --minify",
+    "js:watch": "esbuild src/js/main.js --bundle --outfile=js/main.js --format=iife --watch",
+    "format": "prettier --write \"**/*.{js,html,css,md,json}\"",
+    "lint": "eslint src/js/**/*.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "preview": "live-server --port=3000 --host=localhost --open=/",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "clean": "rm -rf css/styles.css js/main.js dist/"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "full-stack",
+    "javascript",
+    "react",
+    "node"
+  ],
+  "author": "Jérôme Le Champion <jerome.le.champion@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.10.5",
+    "axe-core": "^4.8.3",
+    "axe-playwright": "^2.0.1",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.19.8",
+    "eslint": "^8.56.0",
+    "gsap": "^3.12.2",
+    "live-server": "^1.2.2",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  },
+  "dependencies": {
+    "marked": "^11.1.1"
+  }
+}

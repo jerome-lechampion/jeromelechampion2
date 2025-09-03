@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parcours professionnel de Jérôme Le Champion - Lead Développeur Full-Stack, expériences chez TotalEnergies, SWAP, Alstom">
+    <title>Mon Parcours - Jérôme Le Champion</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased" data-page="experience">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="container-max mx-auto container-padding">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="text-xl font-bold text-gradient">JLC</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link">Accueil</a>
+                    <a href="projets.html" class="nav-link">Projets</a>
+                    <a href="experience.html" class="nav-link active">Expérience</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button type="button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" data-theme-toggle>
+                        <svg class="w-5 h-5 icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 icon-moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- Hero -->
+        <section class="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+            <div class="container-max mx-auto container-padding text-center">
+                <h1 class="hero-title text-gray-900 dark:text-white mb-6">
+                    Mon <span class="text-gradient">Parcours</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                    6+ années d'expérience dans le développement d'applications critiques, de l'automobile au transport ferroviaire
+                </p>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="section-padding bg-white dark:bg-gray-900">
+            <div class="container-max mx-auto container-padding">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Timeline item 1 -->
+                    <div class="relative pl-16 pb-16">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="animate-on-scroll">
+                            <div class="flex flex-col lg:flex-row items-start gap-8">
+                                <div class="flex-1">
+                                    <div class="text-sm text-primary-600 dark:text-primary-400 font-medium mb-1">Oct 2019 - Présent</div>
+                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Référent Technique & Lead Full-Stack</h3>
+                                    <div class="text-lg text-gray-600 dark:text-gray-300 mb-4">TotalEnergies - La Défense</div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                        Conception et développement from scratch de plateformes web critiques : monitoring IoT pour milliers d'objets connectés, 
+                                        plateforme e-commerce B2B multi-pays (50+ pays, CA M€). Lead technique sur architecture, intégrations API (10+), CI/CD et qualité.
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Réalisations clés</h4>
+                                            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                                                <li>• Plateforme e-commerce déployée dans 50+ pays</li>
+                                                <li>• Monitoring temps réel de milliers d'IoT</li>
+                                                <li>• Architecture scalable maintien 99.9% uptime</li>
+                                                <li>• Réduction temps développement de 40%</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Technologies</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">React</span>
+                                                <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded">Next.js</span>
+                                                <span class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">Node.js</span>
+                                                <span class="px-2 py-1 text-xs bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded">GraphQL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline item 2 -->
+                    <div class="relative pl-16 pb-16">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="animate-on-scroll">
+                            <div class="text-sm text-primary-600 dark:text-primary-400 font-medium mb-1">2015 - 2019</div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">CTO & Co-fondateur</h3>
+                            <div class="text-lg text-gray-600 dark:text-gray-300 mb-4">SWAP (Startup) - Paris</div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Co-création d'un écosystème complet : trackers GPS + apps mobiles (Android/iOS) + plateforme web. 
+                                Développement du protocole propriétaire, algorithmes ML pour analyse de trajectoires.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">React Native</span>
+                                <span class="px-2 py-1 text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded">ML</span>
+                                <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline item 3 -->
+                    <div class="relative pl-16 pb-16">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="animate-on-scroll">
+                            <div class="text-sm text-primary-600 dark:text-primary-400 font-medium mb-1">2015 - 2017</div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Ingénieur V&V / Automatisation Tests</h3>
+                            <div class="text-lg text-gray-600 dark:text-gray-300 mb-4">Alstom Transport - Villeurbanne</div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Développement d'outils d'automatisation pour validation & vérification sur projet Urbalis Fluence. 
+                                Création de frameworks de tests, intégration continue, reporting qualité.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded">Java</span>
+                                <span class="px-2 py-1 text-xs bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded">Ada</span>
+                                <span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">Jenkins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section-padding bg-gray-50 dark:bg-gray-800">
+            <div class="container-max mx-auto container-padding">
+                <h2 class="section-title text-center text-gray-900 dark:text-white mb-16">Formation</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="card p-8 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">École des Mines de Saint-Étienne</h3>
+                        <div class="text-primary-600 dark:text-primary-400 font-medium mb-4">2012 - 2015</div>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Diplôme d'Ingénieur - Informatique & Systèmes<br>
+                            Spécialisation : Génie Informatique, Systèmes Embarqués
+                        </p>
+                    </div>
+                    <div class="card p-8 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Polytechnique Montréal</h3>
+                        <div class="text-primary-600 dark:text-primary-400 font-medium mb-4">2014</div>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Échange Académique - Génie Logiciel<br>
+                            Spécialisation : Architectures Logicielles, IA
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section-padding bg-white dark:bg-gray-900">
+            <div class="container-max mx-auto container-padding">
+                <h2 class="section-title text-center text-gray-900 dark:text-white mb-16">Compétences Techniques</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Frontend</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">React</span>
+                                    <span class="text-sm text-gray-500">Expert</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-primary-500 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">TypeScript</span>
+                                    <span class="text-sm text-gray-500">Expert</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-primary-500 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">Next.js</span>
+                                    <span class="text-sm text-gray-500">Expert</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-primary-500 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" data-delay="200">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Backend</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">Node.js</span>
+                                    <span class="text-sm text-gray-500">Expert</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-green-500 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">PostgreSQL</span>
+                                    <span class="text-sm text-gray-500">Expert</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-green-500 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">GraphQL</span>
+                                    <span class="text-sm text-gray-500">Expert</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-green-500 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" data-delay="400">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">DevOps</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">Docker</span>
+                                    <span class="text-sm text-gray-500">Confirmé</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-blue-500 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">Kubernetes</span>
+                                    <span class="text-sm text-gray-500">Confirmé</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-blue-500 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">Azure</span>
+                                    <span class="text-sm text-gray-500">Confirmé</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                    <div class="h-2 bg-blue-500 rounded-full" style="width: 78%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-padding bg-primary-600 dark:bg-primary-700 text-white text-center">
+            <div class="container-max mx-auto container-padding">
+                <h2 class="section-title mb-4">Travaillons ensemble</h2>
+                <p class="text-xl mb-8 text-primary-100 max-w-3xl mx-auto">
+                    Mon expérience peut enrichir votre équipe. Discutons de vos projets.
+                </p>
+                <a href="contact.html" class="btn bg-white text-primary-600 hover:bg-gray-100">
+                    Me contacter
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container-max mx-auto container-padding text-center">
+            <div class="text-2xl font-bold text-gradient mb-4">Jérôme Le Champion</div>
+            <p class="text-gray-400 mb-8">Lead Développeur Full-Stack</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://linkedin.com/in/jerome-le-champion" class="text-gray-400 hover:text-white">LinkedIn</a>
+                <a href="https://github.com/jerome-le-champion" class="text-gray-400 hover:text-white">GitHub</a>
+                <a href="mailto:jerome.le.champion@gmail.com" class="text-gray-400 hover:text-white">Email</a>
+            </div>
+            <p class="text-gray-400 text-sm">© 2024 Jérôme Le Champion. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
