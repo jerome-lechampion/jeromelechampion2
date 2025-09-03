@@ -8,7 +8,7 @@
     "build": "npm run css:build && npm run js:build",
     "css:build": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
     "css:watch": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
-    "js:build": "esbuild js/main.js --bundle --outfile=js/main.js --format=iife --minify",
+    "js:build": "esbuild js/main.js --bundle --outfile=js/main.min.js --format=iife --minify",
     "js:watch": "esbuild js/main.js --bundle --outfile=js/main.js --format=iife --watch",
     "format": "prettier --write \"**/*.{js,html,css,md,json}\"",
     "lint": "eslint js/**/*.js",
