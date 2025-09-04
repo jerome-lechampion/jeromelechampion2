@@ -132,34 +132,7 @@ class I18n {
         e.preventDefault();
         const lang = button.getAttribute('data-lang');
         this.setLanguage(lang);
-        
-        // Close language menu after selection
-        const menu = button.closest('[data-lang-menu]');
-        if (menu) {
-          menu.classList.add('hidden');
-        }
       });
-    });
-
-    // Setup language menu toggle
-    document.querySelectorAll('[data-lang-menu-toggle]').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const menu = button.parentElement.querySelector('[data-lang-menu]');
-        if (menu) {
-          menu.classList.toggle('hidden');
-        }
-      });
-    });
-
-    // Close language menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('[data-lang-menu-toggle]') && !e.target.closest('[data-lang-menu]')) {
-        document.querySelectorAll('[data-lang-menu]').forEach(menu => {
-          menu.classList.add('hidden');
-        });
-      }
     });
   }
 
@@ -174,17 +147,6 @@ class I18n {
       const lang = button.getAttribute('data-lang');
       button.classList.toggle('active', lang === this.currentLang);
     });
-
-    // Update current language display
-    const currentLangDisplay = document.getElementById('current-lang');
-    if (currentLangDisplay) {
-      const langNames = {
-        'fr': 'FR',
-        'en': 'EN',
-        'es': 'ES'
-      };
-      currentLangDisplay.textContent = langNames[this.currentLang] || this.currentLang.toUpperCase();
-    }
   }
 
   formatDate(date, options = {}) {

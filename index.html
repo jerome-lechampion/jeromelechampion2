@@ -129,14 +129,22 @@
 
     <main id="main">
         <!-- Hero Section -->
-        <section id="home" class="pt-16 section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen flex items-center">
+        <section id="home" class="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen flex flex-col justify-center">
+            <!-- Main title - full width line above -->
+            <div class="container-max mx-auto text-center mb-24">
+                <h1 class="text-6xl lg:text-7xl xl:text-8xl font-bold text-gradient animate-on-scroll" data-animation="fade-in">
+                    Jérôme Le Champion
+                </h1>
+            </div>
+            
+            <!-- Content grid below -->
             <div class="container-max mx-auto container-padding">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="animate-on-scroll" data-animation="slide-right">
-                        <h1 class="hero-title mb-6">
+                        <h2 class="hero-title mb-6">
                             <span class="block text-gray-900 dark:text-white" data-i18n="home.title">Lead Développeur Full-Stack</span>
                             <span class="block text-gradient mt-2" data-i18n="home.subtitle">Je conçois et scale des plateformes web & mobiles</span>
-                        </h1>
+                        </h2>
                         
                         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed" data-i18n="home.description">
                             De l'architecture à la livraison, je transforme des besoins complexes en produits fiables et performants.
@@ -184,9 +192,9 @@
                     <!-- Hero Image / Stats -->
                     <div class="lg:pl-12 animate-on-scroll" data-animation="slide-left" data-delay="200">
                         <div class="relative">
-                            <!-- Profile image placeholder -->
-                            <div class="w-80 h-80 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl shadow-2xl flex items-center justify-center text-white text-6xl font-bold mb-8">
-                                JLC
+                            <!-- Profile image -->
+                            <div class="w-80 h-80 mx-auto rounded-2xl shadow-2xl overflow-hidden mb-8">
+                                <img src="assets/images/projects/main_photo.jpg" alt="Jérôme Le Champion" class="w-full h-full object-cover">
                             </div>
 
                             <!-- Floating stats cards -->
@@ -226,45 +234,66 @@
                 <!-- Tech grid -->
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 stagger-children" data-stagger-delay="100">
                     <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
-                        <div class="w-12 h-12 mx-auto mb-3 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
-                            <span class="text-blue-600 dark:text-blue-400 font-bold text-sm">React</span>
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/React-icon.svg" alt="React" class="w-10 h-10">
                         </div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">React</p>
                     </div>
                     
                     <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
-                        <div class="w-12 h-12 mx-auto mb-3 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                            <span class="text-gray-900 dark:text-white font-bold text-xs">Next.js</span>
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/nextjs-icon.svg" alt="Next.js" class="w-10 h-10">
                         </div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">Next.js</p>
                     </div>
 
                     <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
-                        <div class="w-12 h-12 mx-auto mb-3 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
-                            <span class="text-blue-600 dark:text-blue-400 font-bold text-xs">TS</span>
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/Typescript_logo_2020.svg" alt="TypeScript" class="w-10 h-10">
                         </div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">TypeScript</p>
                     </div>
 
                     <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
-                        <div class="w-12 h-12 mx-auto mb-3 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
-                            <span class="text-green-600 dark:text-green-400 font-bold text-xs">Node</span>
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/Node.js_logo.svg" alt="Node.js" class="w-10 h-10">
                         </div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">Node.js</p>
                     </div>
 
                     <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
-                        <div class="w-12 h-12 mx-auto mb-3 bg-pink-100 dark:bg-pink-900 rounded-lg flex items-center justify-center">
-                            <span class="text-pink-600 dark:text-pink-400 font-bold text-xs">GQL</span>
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/GraphQL_Logo.svg" alt="GraphQL" class="w-10 h-10">
                         </div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">GraphQL</p>
                     </div>
 
                     <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
-                        <div class="w-12 h-12 mx-auto mb-3 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center">
-                            <span class="text-indigo-600 dark:text-indigo-400 font-bold text-xs">SQL</span>
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/Postgresql_elephant.svg" alt="PostgreSQL" class="w-10 h-10">
                         </div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">PostgreSQL</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/Amazon_Web_Services_Logo.svg" alt="AWS" class="w-10 h-10">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">AWS</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/mongodb-icon-2.svg" alt="MongoDB" class="w-10 h-10">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">MongoDB</p>
+                    </div>
+
+                    <div class="card p-6 text-center hover:scale-105 transition-transform duration-200 animate-on-scroll">
+                        <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                            <img src="assets/images/projects/docker-icon-svgrepo-com.svg" alt="Docker" class="w-10 h-10">
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">Docker</p>
                     </div>
                 </div>
             </div>
