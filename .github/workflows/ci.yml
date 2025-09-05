@@ -147,6 +147,4 @@ jobs:
           https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/projets.html
           https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/experience.html
           https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/contact.html
-        uploadArtifacts: true
-        temporaryPublicStorage: true
         configPath: ./lighthouserc.json
