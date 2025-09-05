@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
-import { writeFileSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+const { writeFileSync } = require('fs');
+const { join } = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 const rootDir = join(__dirname, '..');
 
 // Configuration
