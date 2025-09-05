@@ -7,7 +7,9 @@
       "Bash(npm run e2e:*)",
       "Bash(npx playwright install:*)",
       "Bash(npm test:*)",
-      "Bash(npm run generate:sitemap:*)"
+      "Bash(npm run generate:sitemap:*)",
+      "Bash(npx js-yaml:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []

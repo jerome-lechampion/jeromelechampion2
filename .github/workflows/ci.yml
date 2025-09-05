@@ -94,55 +94,58 @@ jobs:
           robots.txt
           sitemap.xml
 
-  deploy-preview:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'pull_request'
-    
-    steps:
-    - name: Download build artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: dist
-        
-    - name: Deploy to Vercel Preview
-      uses: vercel/action@v1
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-
-  deploy-production:
+  deploy:
     runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
     
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
     - name: Download build artifacts
       uses: actions/download-artifact@v4
       with:
         name: dist
+        path: ./
         
-    - name: Deploy to Vercel Production
-      uses: vercel/action@v1
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload to GitHub Pages
+      uses: actions/upload-pages-artifact@v3
       with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        vercel-args: '--prod'
+        path: ./
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
 
   lighthouse:
     runs-on: ubuntu-latest
-    needs: deploy-preview
-    if: github.event_name == 'pull_request'
+    needs: deploy
+    if: github.ref == 'refs/heads/main'
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       
+    - name: Wait for deployment
+      run: sleep 30
+      
     - name: Audit URLs using Lighthouse
       uses: treosh/lighthouse-ci-action@v10
       with:
-        configPath: './lighthouserc.json'
+        urls: |
+          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/projets.html
+          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/experience.html
+          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/contact.html
         uploadArtifacts: true
         temporaryPublicStorage: true
