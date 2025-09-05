@@ -345,6 +345,6 @@ if (document.readyState === 'loading') {
 }
 
 // Make utils available globally for debugging
-if (process.env.NODE_ENV === 'development') {
+if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'development') {
   window.utils = utils;
 }
