@@ -44,7 +44,7 @@
 
                 <div class="hidden md:flex items-center space-x-4">
                     <div class="relative">
-                        <button type="button" class="flex items-center space-x-1 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" data-lang-menu-toggle>
+                        <button type="button" class="flex items-center space-x-1 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" data-lang-menu-toggle aria-label="Sélectionner la langue">
                             <span id="current-lang" class="text-sm font-medium">FR</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -57,7 +57,7 @@
                         </div>
                     </div>
 
-                    <button type="button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200" data-theme-toggle>
+                    <button type="button" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200" data-theme-toggle aria-label="Changer de thème">
                         <svg class="w-5 h-5 icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
@@ -67,7 +67,7 @@
                     </button>
                 </div>
 
-                <button type="button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" data-mobile-menu-toggle>
+                <button type="button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" data-mobile-menu-toggle aria-label="Menu de navigation">
                     <div class="w-6 h-6 relative">
                         <span class="absolute left-0 top-1 w-6 h-0.5 bg-current transition-all duration-300"></span>
                         <span class="absolute left-0 top-3 w-6 h-0.5 bg-current transition-all duration-300"></span>
@@ -456,7 +456,7 @@
         </div>
     </footer>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-30">
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 z-30" aria-label="Retour en haut de page">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
