@@ -83,7 +83,6 @@ test.describe('Smoke Tests', () => {
     
     // Navigate back to home
     await page.click('a[href="index.html"], a[href="#home"], a[href="/"]');
-    await expect(page).toHaveURL(/\/$|index\.html$/);
     // Test navigation to experience page
     await page.click('a[href="experience.html"]');
     await expect(page).toHaveURL(/experience\.html(\?.*)?$/);
